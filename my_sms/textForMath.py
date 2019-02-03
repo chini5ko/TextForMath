@@ -26,7 +26,7 @@ def addition():
     
     return str(question)
 
-def substraction():
+def subtraction():
     x =  random.randint(1,6)
     question = ""
     # Start our TwiML response
@@ -89,17 +89,17 @@ def incoming_sms():
     if body == 'menu':
         resp.message("Press # for \n" +
         "1 - Addition \n" +
-        "2 - Substraction \n"
+        "2 - Subtraction \n"
         "3 - Multiplication")
     elif body == 'math':
         resp.message("Press # for \n" +
         "1 - Addition \n" +
-        "2 - Substraction \n"
+        "2 - Subtraction \n"
         "3 - Multiplication")
     elif body == '1':
         resp.message(addition())
     elif body == '2':
-        resp.message(substraction())
+        resp.message(subtraction())
     elif body == '3':
         resp.message(multiply())
     elif body == '2019':
@@ -127,7 +127,7 @@ def incoming_sms():
     elif body == 'help':
         resp.message("Press # for \n" +
         "1 - Addition \n" +
-        "2 - Substraction \n"
+        "2 - Subtraction \n"
         "3 - Multiplication")
     elif body.isalpha():
         resp.message("Sorry, we did not undestand that. \nPlease type: \nMenu")
@@ -136,7 +136,7 @@ def incoming_sms():
     else:
         resp.message("Sorry, we did not undestand that, \n" +
         "1 - Addition \n" +
-        "2 - Substraction \n" +
+        "2 - Subtraction \n" +
         "3 - Multiplication")
 
     return str(resp)
