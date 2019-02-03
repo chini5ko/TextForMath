@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url(img/ocean.jpg);
+    background-color: rgb(0, 0, 0);   
     
 }
 
@@ -77,7 +77,7 @@ Sections
 
 
 .main{
-    background-color: rgb(12, 86, 197);
+    background-color: rgba(65, 77, 95, 0.349);
 
 }
 
@@ -86,27 +86,6 @@ Sections
     padding-bottom:  2em;
 
 }
-
-.sidebar{
-    background-color:  rgba(20, 107, 81, 0.5);
-    padding-bottom:  2em;
-}
-
-.education{
-    background-color:  rgba(128, 128, 128, 0.205);
-    padding-bottom:  2em;
-}
-
-.contact{
-    background-color:  rgba(20, 107, 81, 0.5);
-    padding-bottom:  2em;
-}
-
-.footer{
-    background-color: rgba(8, 8, 8, 0.459);
-}
-
-
 
 /*--------------------------------------------------------------
 Sub-Sections
@@ -124,4 +103,30 @@ Colors
 --------------------------------------------------------------*/
 #white{
     color:white;
+}
+
+
+/*--------------------------------------------------------------
+CSS Grid layout for modern browsers:
+--------------------------------------------------------------*/
+
+@supports (grid-area: auto) {
+
+	@media screen and (min-width: 50em) {
+
+        .main {
+			max-width: none;
+			display: grid;
+			grid-template-columns: 20em auto;
+		}
+
+		.phone {
+			grid-column: 2/3;
+		}
+
+		.github {
+			grid-column: 1/3;
+		}
+
+    }
 }
