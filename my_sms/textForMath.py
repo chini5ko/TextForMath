@@ -1,8 +1,55 @@
 from flask import Flask, request, redirect, session
 from twilio.twiml.messaging_response import MessagingResponse
+import random
 
 app = Flask(__name__)
 app.config.from_object(__name__)
+
+def addition():
+    x =  random.randint(1,6)
+    question = ""
+    # Start our TwiML response
+    print(x)
+    x = str(x)
+    if x == '1':
+        question = "What's 7 + 8?"
+    elif x == '2':
+        question = "What's 22 + 24?"
+    elif x == '3':
+        question = "What's 70 + 40?"
+    elif x == '4':
+        question = "What's 345 + 67?"
+    elif x == '5':
+        question = "What's 350 + 350?"    
+    else:
+        question = "What's 63 + 8?"
+    
+    return str(question)
+
+def substraction():
+    x =  random.randint(1,6)
+    question = ""
+    # Start our TwiML response
+    print(x)
+    x = str(x)
+    if x == '1':
+        question = "What's 7 + 8?"
+    elif x == '2':
+        question = "What's 22 + 24?"
+    elif x == '3':
+        question = "What's 70 + 40?"
+    elif x == '4':
+        question = "What's 345 + 67?"
+    elif x == '5':
+        question = "What's 350 + 350?"    
+    else:
+        question = "What's 63 + 8?"
+    
+    return str(question)
+    
+def correct():
+    return str("that's Correct! \nPress Math for menu \nor Press 1 for one more")
+
 
 @app.route("/sms", methods=['GET', 'POST'])
 def incoming_sms():
@@ -27,19 +74,25 @@ def incoming_sms():
         "2 - Substraction \n"
         "3 - Multiplication")
     elif body == '1':
-        resp.message("What's 10 + 1?")
+        resp.message(addition())
     elif body == '2':
         resp.message("What's 20 - 1?")
     elif body == '3':
         resp.message("What's 30 * 2?")
-    elif body == '11':
-        resp.message("That's Correct! \nPress Math for menu \nor Press 1 for one more")
-    elif body == '19':
-        resp.message("That's Correct! \nPress Math for menu \nor Press 2 for one more")
-    elif body == '60':
-        resp.message("That's Correct! \nPress Math for menu \nor Press 3 for one more")
+    elif body == '15':
+        resp.message(correct())
+    elif body == '56':
+        resp.message(correct())
+    elif body == '71':
+        resp.message(correct())
+    elif body == '110':
+        resp.message(correct())
+    elif body == '412':
+        resp.message(correct())
+    elif body == '700':
+        resp.message(correct())
     elif body.isalpha():
-        resp.message("Not a number")
+        resp.message("Sorry, we did not undestand that. \nPlease type: \nMenu")
     elif body.isdigit():
         resp.message("Incorrect, try again!")
     else:
@@ -49,3 +102,5 @@ def incoming_sms():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
