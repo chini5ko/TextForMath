@@ -1,5 +1,5 @@
 # ATextForMath
-A hackathon project that integrates Twilio APIs such that anyone with a phone can practice algebra! 
+A hackathon project that integrates Twilio APIs such that anyone with a phone number can practice algebra! 
 
 HACK : https://devfe.st/
 
