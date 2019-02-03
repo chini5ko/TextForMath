@@ -46,10 +46,33 @@ def substraction():
         question = "What's 91 - 10?"
     
     return str(question)
+
+def multiply():
+    x =  random.randint(1,6)
+    question = ""
+    # Start our TwiML response
+    print(x)
+    x = str(x)
+    if x == '1':
+        question = "What's 20 x 2?"
+    elif x == '2':
+        question = "What's 7 x 10?"
+    elif x == '3':
+        question = "What's 5 x 5?"
+    elif x == '4':
+        question = "What's 9 x 9?"
+    elif x == '5':
+        question = "What's 11 x 11?"    
+    else:
+        question = "What's 512 x 2?"
+    
+    return str(question)
     
 def correct():
-    return str("that's Correct! \nPress Math for menu \nor Press 1 for one more")
-
+    return str("that's Correct! \n :) \nMenu:\n"+ 
+        "1 - Addition \n" +
+        "2 - Substraction \n"
+        "3 - Multiplication")
 
 @app.route("/sms", methods=['GET', 'POST'])
 def incoming_sms():
@@ -78,7 +101,7 @@ def incoming_sms():
     elif body == '2':
         resp.message(substraction())
     elif body == '3':
-        resp.message(substraction())
+        resp.message(multiply())
     elif body == '2019':
         resp.message(correct())
     elif body == '56':
@@ -97,12 +120,24 @@ def incoming_sms():
         resp.message(correct())
     elif body == '81':
         resp.message(correct())
+    elif body == '121':
+        resp.message(correct())
+    elif body == '1024':
+        resp.message(correct())
+    elif body == 'help':
+        resp.message("Press # for \n" +
+        "1 - Addition \n" +
+        "2 - Substraction \n"
+        "3 - Multiplication")
     elif body.isalpha():
         resp.message("Sorry, we did not undestand that. \nPlease type: \nMenu")
     elif body.isdigit():
         resp.message("Incorrect, try again!")
     else:
-        resp.message("Sorry, we did not undestand that, try again with:")
+        resp.message("Sorry, we did not undestand that, \n" +
+        "1 - Addition \n" +
+        "2 - Substraction \n" +
+        "3 - Multiplication")
 
     return str(resp)
 

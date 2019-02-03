@@ -1,0 +1,127 @@
+.site {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+body{
+    background-image: url(img/ocean.jpg);
+    
+}
+
+/*--------------------------------------------------------------
+General styling
+--------------------------------------------------------------*/
+
+h1,
+h2,
+h3 {
+	text-align: center;
+	margin: 0;
+    padding: 32px;
+    color: rgba(255, 255, 255, 0.938);
+}
+
+h1{
+    font-size: 3em;
+}
+
+h4,
+h5,
+h6 {
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 16px;
+}
+
+p {
+	margin: 0;
+    padding: 16px;
+    font-size: 20px;
+    
+}
+
+ul{
+display: flex;
+justify-content: space-around;
+}
+
+li {
+    text-align: center;
+}
+
+ol{
+    margin-left: auto;
+    margin-right: auto;
+  
+    text-align: left;
+}
+
+img {
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+#profileIma{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 50%;
+    border:5px solid rgba(0, 0, 0, 0.932);
+}
+/*--------------------------------------------------------------
+Sections
+--------------------------------------------------------------*/
+
+
+.main{
+    background-color: rgb(12, 86, 197);
+
+}
+
+.portafolio{
+    background-color: rgb(0, 0, 0);    
+    padding-bottom:  2em;
+
+}
+
+.sidebar{
+    background-color:  rgba(20, 107, 81, 0.5);
+    padding-bottom:  2em;
+}
+
+.education{
+    background-color:  rgba(128, 128, 128, 0.205);
+    padding-bottom:  2em;
+}
+
+.contact{
+    background-color:  rgba(20, 107, 81, 0.5);
+    padding-bottom:  2em;
+}
+
+.footer{
+    background-color: rgba(8, 8, 8, 0.459);
+}
+
+
+
+/*--------------------------------------------------------------
+Sub-Sections
+--------------------------------------------------------------*/
+
+
+.twin{
+    background-color: lightpink;
+}
+
+
+
+/*--------------------------------------------------------------
+Colors
+--------------------------------------------------------------*/
+#white{
+    color:white;
+}
