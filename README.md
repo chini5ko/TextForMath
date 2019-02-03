@@ -6,6 +6,6 @@ HACK : https://devfe.st/
 
 Text to (201) 685-2339 to try out our DEMO!
 
-###Team: 
+### Team: 
 -   Hector Liang - Github: @chini5ko
 -   Satoshi Mitsuno
